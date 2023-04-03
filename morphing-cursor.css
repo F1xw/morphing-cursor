@@ -1,0 +1,30 @@
+body[cursor-enabled="true"] * {
+    cursor: none !important;
+}
+
+body[cursor-enabled="true"] #morphingCursor {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #494949;
+    background-color: #ffffff52;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out, border .1s ease-in-out;
+    opacity: 0;
+    z-index: 999999;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+#morphingCursor[state="active"] {
+    border: 2px solid #51973f !important;
+}
+
+body:hover #morphingCursor {
+    opacity: 1;
+}
